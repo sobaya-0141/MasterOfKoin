@@ -20,10 +20,11 @@ class App : Application() {
             viewModel { MainActivityViewModel(get()) }
             viewModel { MainFragmentViewModel(get()) }
             viewModel { (id: Int) -> SubFragmentViewModel(id, get()) }
+            factory { (id: Int) -> Factory(id) }
         }
         startKoin {
             androidContext(this@App)
-            modules(listOf(module))
+            modules(module)
         }
     }
 }
