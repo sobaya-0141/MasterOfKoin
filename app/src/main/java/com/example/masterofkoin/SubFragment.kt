@@ -18,6 +18,14 @@ class SubFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("TEST", activityViewModel.test.value)
+
+        viewModel.setMessage("TEST")
+        viewModel.setMessage("TEST2")
+        viewModel.setMessage("TEST3")
+        viewModel.loadMessage()
+        viewModel.loadMessage2()
+        viewModel.loadMessage3()
+        viewModel.setMessage("TEST4")
+        viewModel.setMessage("TEST5")
     }
 }
